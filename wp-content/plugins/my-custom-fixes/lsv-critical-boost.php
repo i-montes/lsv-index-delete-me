@@ -1,9 +1,14 @@
 <?php
 /**
- * Plugin Name: LSV Critical Boost
- * Description: Optimiza el primer renderizado cargando CSS crítico ligero y esqueletos para los elementos principales.
- * Version: 1.0.0
- * Author: ChatGPT
+ * Plugin Name: My Custom Fixes
+ * Plugin URI: https://tusitio.com/
+ * Description: Plugin minimalista para colocar snippets o correcciones personalizadas en WordPress.
+ * Version: 1.1.0
+ * Author: imontes
+ * Author URI: https://tusitio.com/
+ * License: GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: my-custom-fixes
  */
 
 defined('ABSPATH') || exit;
