@@ -179,14 +179,29 @@ picture {
 
 img[data-skeleton] {
   position: relative;
+  display: block;
+  inline-size: 100%;
+  width: 100%;
+  block-size: auto;
+  height: auto;
+  max-inline-size: 100%;
+  max-block-size: none;
+  flex: none;
   background: linear-gradient(
     90deg,
     rgba(245, 245, 245, 0.85) 25%,
     rgba(230, 230, 230, 0.85) 50%,
     rgba(245, 245, 245, 0.85) 75%
   );
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: 200% 100%;
+  border-radius: inherit;
   animation: skeleton-shimmer 1.25s linear infinite;
+}
+
+img[data-skeleton]:not([data-loaded="true"])[width][height] {
+  aspect-ratio: attr(width number) / attr(height number);
 }
 
 @media (prefers-reduced-motion: reduce) {

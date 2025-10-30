@@ -10,6 +10,23 @@
 
     img.dataset.skeletonBound = "true";
 
+    var width = img.getAttribute("width");
+    var height = img.getAttribute("height");
+
+    if (width && height) {
+      if (!img.style.aspectRatio) {
+        img.style.aspectRatio = width + " / " + height;
+      }
+
+      if (!img.style.height || img.style.height === "100%") {
+        img.style.height = "auto";
+      }
+
+      if (!img.style.width) {
+        img.style.width = "100%";
+      }
+    }
+
     if (img.complete && img.naturalWidth > 0) {
       markLoaded(img);
       return;
